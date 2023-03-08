@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   {path :'create', component:CtaegorieCreateComponent},
   {path:'add',component:CtegorieCreateComponent},
+  {path:'create',component:CtaegorieCreateComponent},
 
 
 

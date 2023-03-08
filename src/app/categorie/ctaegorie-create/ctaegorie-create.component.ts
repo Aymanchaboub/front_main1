@@ -24,17 +24,9 @@ export class CtaegorieCreateComponent {
   onSubmit() {
     const formData = new FormData();
     formData.append('nom', this.categoryName);
-    formData.append('image', this.categoryImage, this.categoryImage.name);
+    formData.append('image', this.categoryImage);
     console.log(formData);
-    this.categoryService.addCategory(formData).subscribe(
-      () => {
-        console.log("La catégorie a été créée avec succès !");
-        // ici vous pouvez rediriger l'utilisateur vers une autre page
-      },
-      (error) => {
-        console.log("Erreur lors de la création de la catégorie :", error);
-      }
-    );
+    this.categoryService.addCategory(formData)
   }
 
   onFileSelected(event: Event) {

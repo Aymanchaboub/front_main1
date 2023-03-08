@@ -24,8 +24,13 @@ saveTutorial(): void {
 
   };
 
-  this.categoryservice.create(data);
-  this.submitted = true;
+  this.categoryservice.create(data) .subscribe({
+    next: (res) => {
+      console.log("bibjihdfi");
+      this.submitted = true;
+    },
+    error: (e) => console.error(e)
+  });
 
 
 }
@@ -36,5 +41,11 @@ newCategorie(): void {
     image: undefined,
     
   };
+}
+onFileSelected(event: Event) {
+  const fileInput = event.target as HTMLInputElement;
+  if (fileInput.files && fileInput.files[0]) {
+    this.categories.image = fileInput.files[0];
+  }
 }
 }
