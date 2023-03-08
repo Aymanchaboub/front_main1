@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
 import { CtaegorieCreateComponent } from './categorie/ctaegorie-create/ctaegorie-create.component';
+import { CtegorieCreateComponent } from './componement/ctegorie-create/ctegorie-create.component';
 
 
 
@@ -41,7 +42,9 @@ import { CtaegorieCreateComponent } from './categorie/ctaegorie-create/ctaegorie
     BoardAdminComponent,
 
     ContactComponent,
-     CtaegorieCreateComponent
+     CtaegorieCreateComponent,
+     
+     CtegorieCreateComponent
 
 
   ],

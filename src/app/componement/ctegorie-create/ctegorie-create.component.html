@@ -1,0 +1,34 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            
+            required
+            [(ngModel)]="categories.nom"
+            name="nom"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="file"
+            class="form-control"
+            required
+            [(ngModel)]="categories.image"
+            name="image"
+          />
+        </div>
+  
+        <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Tutorial was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newCategorie()">Add</button>
+      </div>
+    </div>
+  </div>

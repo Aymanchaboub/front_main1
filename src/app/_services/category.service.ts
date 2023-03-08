@@ -4,6 +4,9 @@ import { Observable } from 'rxjs';
 import { Category } from '../model/category';
 
 const apiUrl = 'http://localhost:8080/api/categories';
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -43,6 +46,18 @@ export class CategoryService {
   deleteCategory(id: number): Observable<any> {
     const url = `${apiUrl}/${id}`;
     return this.http.delete(url);
+  }
+  register(nom: string, image: File,): Observable<any> {
+    return this.http.post(
+      apiUrl ,
+      {
+        nom,
+        image,
+      },
+      httpOptions
+    );
+
+
   }
   
 }

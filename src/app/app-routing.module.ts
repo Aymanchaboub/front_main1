@@ -15,6 +15,7 @@ import { CtaegorieCreateComponent } from './categorie/ctaegorie-create/ctaegorie
 import { CorsInterceptor } from './_services/cors.interceptor'; 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './_services/AuthInterceptor'; 
+import { CtegorieCreateComponent } from './componement/ctegorie-create/ctegorie-create.component';
 
 
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
   {path :'create', component:CtaegorieCreateComponent},
+  {path:'add',component:CtegorieCreateComponent},
 
 
 

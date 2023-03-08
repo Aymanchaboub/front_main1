@@ -12,7 +12,7 @@ export class AuthGuard implements CanActivate {
   canActivate(): boolean {
     const userRole =   this.storageService.getUser().roles;
 
-    if (userRole === 'ROLE_ADMIN') {
+    if (userRole == 'ROLE_ADMIN') {
       return true;
     } else {
       this.router.navigate(['/login']);
